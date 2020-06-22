@@ -90,8 +90,17 @@ git remote -v  # gives URLs for name of remote repo in current working dir
 git remote show origin # show detailed info on <origin> repo
 git branch -r # show branches in remote repo
 
-# to modify remote repo, first pull changes from repo, then merge with local branch,
-# the push back to origin
+git log -p origin/master # view a branch to see where we may have to resolve
+                         # 3 way merge
+# resolve 2-way conflict manually then perform merge
+git commit
+git push
+
+
+
+# to modify remote repo, first pull changes from repo, 
+# then merge with local branch, then push back to origin
+
 
 ```
 
@@ -106,6 +115,8 @@ Two algorithms for merging:
 
 Merge conflicts resolution - run git status if a merge conflict ensues and usually
 tells you what to do to resolve.
+
+
 
 
 
