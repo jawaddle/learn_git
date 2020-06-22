@@ -45,6 +45,13 @@ git checkout -p <filename> # change by change acceptance of latest snapshot rath
 git add *  # stage all tracked files
 git reset HEAD <filename> # unstage filename
 
+# ways to get help/docs in git
+git help <verb>
+git <verb> --help
+man git-<verb>
+git <verb> -h # a concise way to get help
+
+
 ### Amending commits
 git commit --amend # will commit all new staged items but allow editing of message
                    # even if nothing in staging area
