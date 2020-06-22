@@ -63,6 +63,13 @@ Git uses the HEAD alias to represent the currently checked out snapshot of a pro
 echo .DS_STORE > .gitignore  # add MacOSX specific file to ingore list for commits
 git add .gitignore  # if not already added
 git commit -m "Add .gitignore preference"
+```
+## Tips on .gitignore
+
+- https://www.freecodecamp.org/news/gitignore-what-is-it-and-how-to-add-to-repo/
+- https://github.com/github/gitignore/blob/master/Python.gitignore
+
+```bash
 git branch  # list all the currently active branches
 git branch <new-feature> # create new branch with name <new-feature>
 git checkout <new-feature> # change active branch to the one named <new-feature>
@@ -83,11 +90,8 @@ git remote -v  # gives URLs for name of remote repo in current working dir
 git remote show origin # show detailed info on <origin> repo
 git branch -r # show branches in remote repo
 
-# to modify remote repo, but first pull changes from repo, then merge with local branch,
+# to modify remote repo, first pull changes from repo, then merge with local branch,
 # the push back to origin
-
-
-
 
 ```
 
@@ -104,12 +108,6 @@ Merge conflicts resolution - run git status if a merge conflict ensues and usual
 tells you what to do to resolve.
 
 
-
-> ## Tips on .gitignore
-
-- https://www.freecodecamp.org/news/gitignore-what-is-it-and-how-to-add-to-repo/
-- https://github.com/github/gitignore/blob/master/Python.gitignore
-- 
 
 
 
