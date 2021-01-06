@@ -111,7 +111,7 @@ git push
 
 ```
 
-Branch - a pointer to a particular commit - independent line of development.  Default branch git creates for new repo is called the master. Master is known good state.  
+Branch - a pointer to a particular commit - independent line of development.  Default branch git creates for new repo is historically called the 'master'. Master is known good state. Master was the historical and unfortuante name used in the past and all new projects should seriously consider using 'main' as the default nomenclature for the known good branch of the repository.  
 
 Merge - combining branched data and history together
 
