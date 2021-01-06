@@ -75,6 +75,7 @@ git commit -m "Add .gitignore preference"
 
 - https://www.freecodecamp.org/news/gitignore-what-is-it-and-how-to-add-to-repo/
 - https://github.com/github/gitignore/blob/master/Python.gitignore
+- https://marklodato.github.io/visual-git-guide/index-en.html
 
 ```bash
 git branch  # list all the currently active branches
