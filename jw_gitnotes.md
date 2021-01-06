@@ -112,14 +112,36 @@ git push
 
 ```
 
-Branch - a pointer to a particular commit - independent line of development.  Default branch git creates for new repo is historically called the 'master'. Master is known good state. Master was the historical and unfortuante name used in the past and all new projects should seriously consider using 'main' as the default nomenclature for the known good branch of the repository.  
+Branch - a pointer to a particular commit - independent line of development.  Default branch git creates for new repo is historically called the 'master'. Master is known good state. Master was the historical and unfortuante name used in the past and all new projects should seriously consider using 'main' as the default nomenclature for the known good branch of the repository.  You can make the switch from master to main by performing the following steps outlined in this link:
+
+[master to main]https://stevenmortimer.com/5-steps-to-change-github-default-branch-from-master-to-main/
+
+The short form of that content is here:
+```bash
+# Change default branch from master to main
+
+# Change to directory containing the project and issue commands into shell
+git branch -m master main # Move the mastter branch to main
+git push -u origin main   # Push main to remote repo
+git symbolic-ref refs/remotes/origin/HEAD refs/remotes/origin/main  # Point HEAD to main branch
+git branch -a  # verify that HEAD now points to main
+
+# Now go to GitHub site for repo and change default branch to main 
+# 1. Click Settings -> Branches and change the default branch to main
+# 2. Say yes, that you understand you want to update the default branch
+
+# Now go back to command line shell
+git push origin --delete master   # Deletes master branch on the remote repo
+git branch -a  # Confirm that master is gone and HEAD points to main
+
+# Give yourself a pat on the back!
+```
 
 Merge - combining branched data and history together
 
 Two algorithms for merging:
--- fast-forward    - all commits in checked out branch are in the merged product
--- three-way merge - master may have changed since branching new-feature branch
-                     so merging requires 3-way merge forming a NEW commit
+-fast-forward: all commits in checked out branch are in the merged product
+-three-way merge: master may have changed since branching new-feature branch so merging requires 3-way merge forming a NEW commit
 
 Merge conflicts resolution - run git status if a merge conflict ensues and usually
 tells you what to do to resolve.
