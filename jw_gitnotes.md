@@ -140,8 +140,8 @@ git branch -a  # Confirm that master is gone and HEAD points to main
 Merge - combining branched data and history together
 
 Two algorithms for merging:
--fast-forward: all commits in checked out branch are in the merged product
--three-way merge: master may have changed since branching new-feature branch so merging requires 3-way merge forming a NEW commit
+- fast-forward: all commits in checked out branch are in the merged product
+- three-way merge: master may have changed since branching new-feature branch so merging requires 3-way merge forming a NEW commit
 
 Merge conflicts resolution - run git status if a merge conflict ensues and usually
 tells you what to do to resolve.
