@@ -126,9 +126,13 @@ git push -u origin main   # Push main to remote repo
 git symbolic-ref refs/remotes/origin/HEAD refs/remotes/origin/main  # Point HEAD to main branch
 git branch -a  # verify that HEAD now points to main
 
-# Now go to GitHub site for repo and change default branch to main 
-# 1. Click Settings -> Branches and change the default branch to main
-# 2. Say yes, that you understand you want to update the default branch
+# Now go to GitHub website and navigate to the repo home page of interest  
+# 1. Click 'Settings' menu (looks like a gear icon)
+# 2. Click on the 'Branch' item in the navigation bar on the left
+# 3. Under the 'Default branch' section, use the 'Master' dropdown menu to set to 'main'
+# 4. Click on the 'Update' button
+# 5. Click the "I understand..." button in the modal dialog box that pops up
+# 6. Done with website now go back to command shell
 
 # Now go back to command line shell
 git push origin --delete master   # Deletes master branch on the remote repo
